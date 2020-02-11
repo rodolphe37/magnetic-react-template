@@ -1,4 +1,4 @@
-# Magnetic v.1 React -Template
+# Magnetic v.2 React -Template
 
 - **Responsive Template made with React, react-router-dom and node-sass**
 
