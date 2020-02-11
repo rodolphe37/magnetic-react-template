@@ -29,3 +29,13 @@ code {
 #main-menu {
   background-color: darkgrey;
 }
+@media (max-width: 1099px) {
+  .home-cl {
+    margin-top: 75px;
+  }
+
+
+  #menu_icon, .close_menu, .show_menu {
+    display: none;
+  }
+}

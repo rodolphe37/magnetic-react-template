@@ -51,6 +51,6 @@
 -    ```$ npm i``` or ```$ npm install ```
 to install the dependencies and
 -    ```$ npm start```
-to start project for personalisation.
+to start project and go to burger-menu-branch ```$ git checkout burger-menu-branch``` for personalisation this V2 Magnetic React Template.
 
 enjoy!!!
