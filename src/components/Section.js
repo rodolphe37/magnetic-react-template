@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
-// import Inner from './Inner'
 import ExplodingModal from './explodingModal/ExplodingModal';
 import './explodingModal/explodingModal.scss'
-import Inner from './Inner'
 
 const Section = () => {
   return (

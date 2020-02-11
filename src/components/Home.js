@@ -1,6 +1,5 @@
 import React, { useState, useRef }  from 'react';
 import Section from './Section';
-import Header from './Header'
 import { useOnClickOutside } from '../hooks';
 import { Burger, Menu } from './BurgerMenu';
 import FocusLock from 'react-focus-lock';
@@ -13,7 +12,6 @@ const Home = () => {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div className="home-cl">
-    <div id="menu_icon" />
       <div id="menu">
         <div ref={node}>
           <FocusLock disabled={!open}>
@@ -24,7 +22,6 @@ const Home = () => {
     </div>
     <div className="section-cl">
     <Menu />
-
     </div>
     <Section />
     </div>

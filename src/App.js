@@ -1,21 +1,7 @@
-import React, { useState, useRef }  from 'react';
+import React  from 'react';
 import { Route } from 'react-router-dom';
-
-
-
-import { ThemeProvider } from 'styled-components';
-import { useOnClickOutside } from './hooks';
-import { theme } from './theme';
-import { Burger, Menu } from './components/BurgerMenu';
-import FocusLock from 'react-focus-lock';
-
-
 import './assets/css/reset.css';
 import './assets/css/main.css';
-
-import Header from './components/Header';
-import Section from './components/Section';
-import Inner from './components/Inner';
 import Home from './components/Home';
 import About from './components/About';
 import TheTeam from './components/TheTeam';
