@@ -13,7 +13,7 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 70;
   border-radius: 5px;
   box-shadow: 1px 1px 2px black;
 

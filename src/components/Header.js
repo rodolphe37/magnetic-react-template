@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState, useRef }  from 'react';
+import { useOnClickOutside } from '../hooks';
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import About from './About';
 import TheTeam from './TheTeam';
 import Contact from './Contact';
 import ModalSimple from './ModalSimple'
+import { Burger, Menu } from './BurgerMenu';
+import FocusLock from 'react-focus-lock';
 
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  const menuId = "main-menu";
+
+  useOnClickOutside(node, () => setOpen(false));
   return (
     <header>
       <div className="logo">
         <a href="index.html"><img src={require("../assets/img/logo.png")} title="Magnetic" alt="Magnetic" /></a>
       </div>{/* end logo */}
       <div id="menu_icon" />
-      <nav>
+      <div id="menu">
+      <div ref={node}>
+        <FocusLock disabled={!open}>
+          <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+          <Menu open={open} setOpen={setOpen} id={menuId} />
+        </FocusLock>
+      </div>
+
+    </div>
+      {/*<nav>
         <Router>
           <ul>
             <Link to="/index.html" className="selected">Home</Link>

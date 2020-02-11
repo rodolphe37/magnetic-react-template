@@ -62,7 +62,8 @@
 
 /*  General CSS*/
 body{
-    background: #fff;
+    background: #23262A !important;
+    overflow: visible !important;
 }
 
 .wrapper{
@@ -273,7 +274,7 @@ h5, h6          { font-weight: bolder }
     box-sizing: border-box;
     position: relative;
     z-index: 55;
-    background: #f6f6f6;
+    background: #454545;
     clear: both;
 }
 

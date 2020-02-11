@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
 }
 
 code {
@@ -17,10 +18,14 @@ code {
 }
 
 .main .work {
-  width: 29.333333% !important;
+  width: 32.333333% !important;
   float: right !important;
 }
 
 .main .work .media {
-  width: 98% !important;
+  width: 90% !important;
+}
+
+#main-menu {
+  background-color: darkgrey;
 }
