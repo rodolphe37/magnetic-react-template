@@ -3,6 +3,7 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import About from './About';
 import TheTeam from './TheTeam';
 import Contact from './Contact';
+import ModalSimple from './ModalSimple'
 
 
 const Header = () => {
@@ -23,10 +24,13 @@ const Header = () => {
             <hr /><br />
             <Link to="/contact">Contact</Link>
             <hr /><br />
+            <Link to="/inner">history</Link>
+            <hr /><br />
           </ul>
           <Route path="/about" component={About} />
           <Route path="/the-team" component={TheTeam} />
           <Route path="/contact" component={Contact} />
+          <Route path="/inner" component={ModalSimple} />
         </Router>
       </nav>{/* end navigation menu */}
       <div className="footer clearfix">

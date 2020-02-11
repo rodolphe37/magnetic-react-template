@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic,500italic,700italic,300italic);
 
-$modal_width: 300;
-$modal_height: 230;
+$modal_width: 800;
+$modal_height: 630;
 $modal_pieces: 300;
 $modal_rows: 15;
-$modal_bg: white;
+$modal_bg: rgb(37, 35, 35);
 $modal_exp_bg:#22FFC2;
 $pieces_per_row: $modal_pieces / $modal_rows;
 
@@ -13,8 +13,8 @@ $pieces_per_row: $modal_pieces / $modal_rows;
     left:0;
     right:0;
     margin:auto;
-    top:50%;
-    transform:translateY(-50%);  
+    top:36%;
+    transform:translateY(-50%);
 }
 *{
     box-sizing:border-box;

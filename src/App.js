@@ -4,6 +4,7 @@ import './assets/css/main.css';
 
 import Header from './components/Header';
 import Section from './components/Section';
+import Inner from './components/Inner';
 
 function App() {
   return (
