@@ -116,15 +116,12 @@ h5, h6          { font-weight: bolder }
 /*  Header  */
 @media (min-width:1099px){
     header{
-        display: block;
-        position: fixed;
+
         top: 0;
         left: 0;
         width: 250px;
         min-height: 100%;
-        padding: 0 0 0 50px;
-        background: #ffffff;
-        float: left;
+
         overflow: hidden;
         z-index: 9999;
     }

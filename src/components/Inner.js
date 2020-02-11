@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Inner = () => {
   return (
@@ -8,7 +9,7 @@ const Inner = () => {
           <div className="work_nav">
             <ul className="btn clearfix">
               <li><a href="#" className="previous" data-title="Previous" /></li>
-              <li><a href="index.html" className="grid" data-title="Portfolio" /></li>
+              <li><NavLink exact to="/"><a className="grid" data-title="Portfolio" /></NavLink></li>
               <li><a href="#" className="next" data-title="Next" /></li>
             </ul>
           </div>{/* end work_nav */}

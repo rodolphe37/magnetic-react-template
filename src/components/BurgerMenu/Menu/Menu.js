@@ -10,15 +10,17 @@ const Menu = ({ open, ...props }) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+    <header>
     <div className="logo">
-        <a href="index.html"><img src={require("../../../assets/img/logo.png")} title="Magnetic" alt="Magnetic" /></a>
-      </div>
-    <a><NavLink exact to="/"><span aria-hidden="true">💁🏻‍♂️Home</span></NavLink></a>
-    <a> <NavLink exact to="/about"><span aria-hidden="true">💸About</span></NavLink></a>
-    <a> <NavLink exact to="/contact"><span aria-hidden="true">📩Contact</span></NavLink></a>
+        <a> <NavLink exact to="/"><img src={require("../../../assets/img/logo.png")} title="Magnetic" alt="Magnetic" /></NavLink></a>
+    </div>
+    <br /><br /><br /><br /><br />
+    <a><NavLink exact to="/"><span aria-hidden="true">💁🏻‍♂️Home</span></NavLink></a><hr /><br />
+    <a> <NavLink exact to="/about"><span aria-hidden="true">💸About</span></NavLink></a><hr /><br />
+    <a> <NavLink exact to="/contact"><span aria-hidden="true">📩Contact</span></NavLink></a><hr /><br />
     <a><NavLink exact to="/inner"><span aria-hidden="true">💁🏻‍♂️History</span></NavLink></a>
-    <div className="footer clearfix">
-        <ul className="social clearfix">
+    <div className="footer">
+        <ul className="social">
           <li><a href="http://facebook.com" className="fb" data-title="Facebook" /></li>
           <li><a href="#" className="google" data-title="Google +" /></li>
           <li><a href="#" className="behance" data-title="Behance" /></li>
@@ -26,11 +28,13 @@ const Menu = ({ open, ...props }) => {
             <li><a href="#" class="dribble" data-title="Dribble"></a></li>
         </ul>{/* end social */}
         <div className="rights">
-          <p>Copyright © 2020 magnetic-react.</p>
-          <p>created by <a href>Rodolphe Augusto</a></p>
+          <p>Copyright © 2020 magnetic-react.</p><br />
+          <p>created by <br /><a href>Rodolphe Augusto</a></p>
         </div>{/* end rights */}
       </div>
+      </header>
   </StyledMenu>
+
 
   )
 }

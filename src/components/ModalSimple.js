@@ -7,13 +7,14 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import Inner from './Inner';
+import { NavLink } from 'react-router-dom';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function AlertDialogSlide() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -45,7 +46,7 @@ export default function AlertDialogSlide() {
             Disagree
           </Button>
           <Button onClick={handleClose} color="primary">
-            Agree
+          <NavLink exact to="/">Agree</NavLink>
           </Button>
         </DialogActions>
       </Dialog>

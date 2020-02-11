@@ -21,7 +21,7 @@
 
 ### Picture Demo
 
-![demogif](demo2.gif)
+![demogif](demo.V2.gif)
 
 ---
 
