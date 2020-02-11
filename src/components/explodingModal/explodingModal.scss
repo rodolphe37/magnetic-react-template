@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic,500italic,700italic,300italic);
+
+$modal_width: 300;
+$modal_height: 230;
+$modal_pieces: 300;
+$modal_rows: 15;
+$modal_bg: white;
+$modal_exp_bg:#22FFC2;
+$pieces_per_row: $modal_pieces / $modal_rows;
+
+%center{
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    top:50%;
+    transform:translateY(-50%);  
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    overflow:hidden;
+    background: #23262A;
+}
+i{
+    display: block;
+    border: 2px solid #EDEDED;
+    border-radius: 100px;
+    width: 30px;
+    line-height: 27px;
+    color: #EDEDED;
+    height: 30px;
+    margin: -4px auto 17px auto;
+}
+.modal{
+    font-family: 'Fira Sans', sans-serif;
+    width:$modal_width + px;
+    height:$modal_height + px;
+    @extend %center !optional;
+    h1{
+        font-weight: 100;
+        color: #2D93EA;
+        margin:0;
+        font-size:20px;
+    }
+    p{
+        font-weight: 100;
+        font-size:11px;
+        opacity:0.6;
+        color: #454C57;
+    }
+    .button{
+        cursor: pointer;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #637F98;
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        background: #EAF5FF;
+        bottom: 0px;
+        padding: 21px 0px;
+        margin: 40px auto 0px auto;
+        -webkit-transition: all .35s;
+        transition: all .35s;
+        &:hover{
+            background:#D5E1EC;
+        }
+    }
+    .modal_restart{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        opacity:1;
+        z-index:3;
+        transition:all .4s .8s;
+        .button_restart{
+            color: rgba(255, 255, 255, 0.29);
+            font-weight: 100;
+            font-size: 12px;
+            transition:all .3s;
+            cursor:pointer;
+            &:hover{
+                color:white;
+            }
+        }
+
+    }
+    &_row{
+        height:$modal_height / $modal_rows + px;
+        position:Relative;
+        &__piece{
+            width:$modal_width / $pieces_per_row + px;
+            height:$modal_height / $modal_rows + px;
+            background:$modal_bg;
+            position:absolute;
+            transition: all 1s .2s cubic-bezier(0.06, 0.54, 0.58, 1);
+            opacity:0;
+        }
+    }
+    .row-1 .modal_row__piece:nth-child(1){
+        border-top-left-radius:4px;
+    }
+    .row-1 .modal_row__piece:nth-child(#{$pieces_per_row}){
+        border-top-right-radius:4px;
+    }
+    .row-#{$modal_rows} .modal_row__piece:nth-child(1){
+        border-bottom-left-radius:4px;
+    }
+    .row-#{$modal_rows} .modal_row__piece:nth-child(#{$pieces_per_row}){
+        border-bottom-right-radius:4px;
+    }
+    &_content{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        height: 100%;
+        right: 0;
+        padding: 30px;
+        text-align: center;
+        opacity:0;
+        transition:all .2s 0s;
+    }
+    @for $r from 1 through $modal_rows{
+        .modal_row.row-#{$r}{
+            @for $p from 1 through $pieces_per_row{
+                .modal_row__piece:nth-child(#{$p}){
+                    transform:scale(0) rotate(random(500) + deg);
+                    left:random(2000) - 1000 + px;
+                    top:random(1000) - 500 + px;
+                    background:adjust-hue($modal_exp_bg,random(100));
+                }
+            }
+        }
+    }
+}
+
+input[type="checkbox"]{
+    display:none
+}
+
+input[type="checkbox"]:checked + label .modal{
+    &_content{
+        opacity:1;
+        transition:all .4s .6s;
+    }
+    &_restart{
+        opacity:0;
+        transition:all .4s 0s;
+    }
+    @for $r from 1 through $modal_rows{
+        .modal_row.row-#{$r}{
+            @for $p from 1 through $pieces_per_row{
+                .modal_row__piece:nth-child(#{$p}){
+                    left:($p - 1) * $modal_width / $pieces_per_row + px;
+                    top:0px;
+                    opacity:1;
+                    transform:scale(1) rotate(0deg);
+                    background:$modal_bg;
+                    transition: all .2s .3s cubic-bezier(0.06, 0.54, 0.58, 1);
+                }
+            }
+        }
+    }
+}
