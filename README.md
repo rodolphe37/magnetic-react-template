@@ -22,8 +22,12 @@
 ---
 
 ### Picture Demo
+---
+
  **Demo V1**
 ![demogif](demo.gif)
+---
+
   **Demo V2**
 ![demogif2](demo.v2.gif)
 
