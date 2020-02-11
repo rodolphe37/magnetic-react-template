@@ -1,5 +1,6 @@
-# Magnetic v.1 React -Template and
-# Magnetic v.2 React -Template
+# Magnetic v.1 React -Template (Dispo at V1 branch)
+# and
+# Magnetic v.2 React -Template (Dispo at V2 branch)
 
 - **Responsive Template made with React, react-router-dom and node-sass**
 
