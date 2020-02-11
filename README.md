@@ -45,9 +45,9 @@
 ---
 
 ## Start project
-- Clone this repo https://github.com/rodolphe37/magnetic-react-template.git
+- Download this branch repo https://github.com/rodolphe37/magnetic-react-template.git
 - Do in the console :
--    ```$ cd magnetic-react-template```
+-    ```$ cd magnetic-react-template-burger-menu-branch```
 -    ```$ npm i``` or ```$ npm install ```
 to install the dependencies and
 -    ```$ npm start```
